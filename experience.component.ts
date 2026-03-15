@@ -1,8 +1,7 @@
-// experience.component.ts
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PortfolioService } from '../../services/portfolio.service';
-import { Experience } from '../../models/portfolio.model';
+import { PortfolioService } from './portfolio.service';
+import { Experience } from './portfolio.model';
 
 @Component({
   selector: 'app-experience',
