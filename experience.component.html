@@ -1,0 +1,37 @@
+<!-- experience.component.html -->
+<section id="experience" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">// work history</span>
+      <h2 class="section-title">Experience</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-line"></div>
+      <div class="exp-item" *ngFor="let exp of experiences; let i = index">
+        <div class="timeline-dot-wrap">
+          <div class="timeline-dot" [class.current]="exp.current"></div>
+        </div>
+        <div class="exp-card card">
+          <div class="exp-header">
+            <div>
+              <h3 class="exp-role">{{ exp.role }}</h3>
+              <p class="exp-company">{{ exp.company }}</p>
+            </div>
+            <div class="exp-meta">
+              <span class="exp-date">{{ exp.period }}</span>
+              <span class="current-badge" *ngIf="exp.current">Current</span>
+            </div>
+          </div>
+          <div class="exp-tags">
+            <span class="badge" *ngFor="let tag of exp.tags">{{ tag }}</span>
+          </div>
+          <ul class="exp-bullets">
+            <li *ngFor="let bullet of exp.bullets">{{ bullet }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
